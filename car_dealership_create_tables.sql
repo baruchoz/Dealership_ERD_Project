@@ -96,4 +96,7 @@ ALTER TABLE car_service
 ADD FOREIGN KEY(customer_id) REFERENCES customers(customer_id);
 
 ALTER TABLE car_service
-ADD FOREIGN KEY(vin_number) REFERENCES car_inventory(vin_number)
+ADD FOREIGN KEY(vin_number) REFERENCES car_inventory(vin_number);
+
+ALTER TABLE car_service 
+DROP CONSTRAINT vin_number;
